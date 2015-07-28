@@ -1,4 +1,4 @@
-package com.github.maciejwalkowiak.as.task004;
+package com.github.maciejwalkowiak.as;
 
 import org.springframework.stereotype.Service;
 
