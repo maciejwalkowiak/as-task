@@ -17,7 +17,7 @@ class CharGrouperController {
         this.charGrouper = charGrouper;
     }
 
-    @RequestMapping(value = "group", method = RequestMethod.GET)
+    @RequestMapping(value = "group", method = RequestMethod.GET, produces = "text/plain")
     public String group(@RequestParam String input) {
         return charGrouper.group(input);
     }
