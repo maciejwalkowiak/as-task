@@ -1,11 +1,15 @@
 package com.github.maciejwalkowiak.as;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+@Service
 public class CharGrouper {
     private final ArraySorter arraySorter;
     private final StringCompressor stringCompressor;
 
+    @Autowired
     CharGrouper(ArraySorter arraySorter, StringCompressor stringCompressor) {
         Assert.notNull(arraySorter);
         Assert.notNull(stringCompressor);
