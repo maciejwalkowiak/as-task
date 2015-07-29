@@ -9,11 +9,13 @@ import java.util.stream.Collectors;
 
 @Service
 public class StringCompressor {
+    /**
+     * finds last item in list
+     */
+    private final Function<List<CharCounter>, CharCounter> findLastItem = list -> list.get(list.size() - 1);
+
     public String compress(String uncompressed) {
         List<CharCounter> result = new ArrayList<>();
-
-        // finds last item in list
-        Function<List<CharCounter>, CharCounter> findLastItem = list -> list.get(list.size() - 1);
 
         for (Character c : uncompressed.toCharArray()) {
             if (result.isEmpty() || !findLastItem.apply(result).isSameAs(c)) {
