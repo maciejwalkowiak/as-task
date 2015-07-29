@@ -98,6 +98,10 @@ public class ArraySorterTest {
         assertThat(result).containsExactly(expected);
     }
 
+    /**
+     * Make sure that original array has the same elements
+     * in the same order as before sorting
+     */
     @Test
     public void shouldKeepOriginalArrayUnchanged() {
         // given

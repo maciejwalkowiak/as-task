@@ -8,9 +8,17 @@
 </head>
 <body ng-controller="homeController">
 
-<input id="input" type="text" ng-model="input">
-<button id="button" type="button" ng-click="submit()">Process</button>
-<p id="result" ng-show="result">{{result}}</p>
+<div>
+    <label for="input">Ungrouped</label>
+    <input id="input" type="text" ng-model="input">
+</div>
+<div>
+    <button id="button" type="button" ng-click="submit()">Process</button>
+</div>
+<div>
+    <label for="result">Grouped</label>
+    <input id="result" type="text" readonly ng-model="result">
+</div>
 
 </body>
 </html>

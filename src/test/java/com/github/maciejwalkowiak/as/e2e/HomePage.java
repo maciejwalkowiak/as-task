@@ -23,6 +23,6 @@ public class HomePage extends FluentPage {
     }
 
     public String getResult() {
-        return find(RESULT).getText();
+        return find(RESULT).getValue();
     }
 }
