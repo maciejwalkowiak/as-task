@@ -13,7 +13,7 @@ public class StringCompressor {
         List<CharCounter> result = new ArrayList<>();
 
         // finds last item in list
-        Function<List<CharCounter>, CharCounter> findLastItem = list -> result.get(result.size() - 1);
+        Function<List<CharCounter>, CharCounter> findLastItem = list -> list.get(list.size() - 1);
 
         for (Character c : uncompressed.toCharArray()) {
             if (result.isEmpty() || !findLastItem.apply(result).isSameAs(c)) {
